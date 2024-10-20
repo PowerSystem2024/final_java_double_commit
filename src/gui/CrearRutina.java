@@ -50,6 +50,7 @@ public class CrearRutina extends javax.swing.JFrame {
         });
 
         inputName.setBackground(new java.awt.Color(221, 221, 221));
+        inputName.setBorder(null);
         inputName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputNameActionPerformed(evt);
@@ -65,6 +66,7 @@ public class CrearRutina extends javax.swing.JFrame {
         jLabel3.setText("Duración:");
 
         inputDuration.setBackground(new java.awt.Color(221, 221, 221));
+        inputDuration.setBorder(null);
         inputDuration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputDurationActionPerformed(evt);
@@ -76,6 +78,7 @@ public class CrearRutina extends javax.swing.JFrame {
         jLabel4.setText("Dificultad:");
 
         inputDifficult.setBackground(new java.awt.Color(221, 221, 221));
+        inputDifficult.setBorder(null);
         inputDifficult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputDifficultActionPerformed(evt);
@@ -99,6 +102,7 @@ public class CrearRutina extends javax.swing.JFrame {
         inputDescription.setColumns(20);
         inputDescription.setForeground(new java.awt.Color(30, 30, 30));
         inputDescription.setRows(5);
+        inputDescription.setBorder(null);
         jScrollPane1.setViewportView(inputDescription);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -156,7 +160,7 @@ public class CrearRutina extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearRutina, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -179,10 +183,16 @@ public class CrearRutina extends javax.swing.JFrame {
 
     private void btnCrearRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearRutinaActionPerformed
         String nombre = inputName.getText();
-        int duracion = Integer.parseInt(inputDuration.getText());
+        String duracion = inputDuration.getText();
         String dificultad = inputDifficult.getText();
         String descripcion = inputDescription.getText();
-        sr.crearRutina(nombre, duracion, dificultad, descripcion);
+        
+        
+        if (nombre.isEmpty() || duracion.isEmpty() || !dificultad.isEmpty() || !descripcion.isEmpty()) {
+            alta.mostrarMensaje("Es necesario completar todos los campos!", "Info", "Formulario Vacío");
+        } else {
+            sr.crearRutina(nombre, Integer.parseInt(duracion), dificultad, descripcion);
+        }
         
         alta.mostrarMensaje("Se agrego la rutina a la base de datos", "Info", "Rutina creada exitosamente!");
     }//GEN-LAST:event_btnCrearRutinaActionPerformed
