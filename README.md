@@ -3,8 +3,8 @@
 
 ### Cohorte 2024 - Grupo: Double Commit
 
-## Nombre del Proyecto:  
-**Power Gym**
+### Nombre del Proyecto:  
+`**Power Gym**`
 
 ## Descripción del Proyecto:
 
