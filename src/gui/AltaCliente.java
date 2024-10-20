@@ -270,21 +270,31 @@ public class AltaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimpiarCampoClienteActionPerformed
 
     private void btnAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarClienteActionPerformed
-        int id = Integer.parseInt(txtIdCliente.getText());
+        String idStr = txtIdCliente.getText();
         String nombre = txtNombreCliente.getText();
-        int edad = Integer.parseInt(txtEdadCliente.getText());
-        double altura = Double.parseDouble(txtAlturaCliente.getText());
-        double peso = Double.parseDouble(txtPesoCliente.getText());
+        String edadStr = txtEdadCliente.getText();
+        String alturaStr = txtAlturaCliente.getText();
+        String pesoStr = txtPesoCliente.getText();
         String objetivo = txtObjetivoCliente.getText();
-        sc.agregarCliente(id, nombre, edad, altura, peso, objetivo);
 
-        txtIdCliente.setText("");
-        txtNombreCliente.setText("");
-        txtEdadCliente.setText("");
-        txtAlturaCliente.setText("");
-        txtPesoCliente.setText("");
-        txtObjetivoCliente.setText("");
-        mostrarMensaje("Se agrego el cliente a la base de datos", "Info", "Alta exitosa");
+        if (idStr.isEmpty() || nombre.isEmpty() || edadStr.isEmpty() || alturaStr.isEmpty() || pesoStr.isEmpty() || objetivo.isEmpty()) {
+            mostrarMensaje("Es necesario completar todos los campos!", "Error", "Formulario Vacío");
+        } else {
+            int id = Integer.parseInt(idStr);
+            int edad = Integer.parseInt(edadStr);
+            double altura = Double.parseDouble(alturaStr);
+            double peso = Double.parseDouble(pesoStr);
+            
+            sc.agregarCliente(id, nombre, edad, altura, peso, objetivo);
+
+            txtIdCliente.setText("");
+            txtNombreCliente.setText("");
+            txtEdadCliente.setText("");
+            txtAlturaCliente.setText("");
+            txtPesoCliente.setText("");
+            txtObjetivoCliente.setText("");
+            mostrarMensaje("Se agrego el cliente a la base de datos", "Info", "Alta exitosa");
+        }
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
 
 
