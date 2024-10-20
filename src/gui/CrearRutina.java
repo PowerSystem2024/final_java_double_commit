@@ -3,17 +3,17 @@ package gui;
 import servicios.ServicioRutina;
 
 public class CrearRutina extends javax.swing.JFrame {
-    
+
     ServicioRutina sr = new ServicioRutina();
     AltaCliente alta = new AltaCliente();
-    
+
     public CrearRutina() {
         initComponents();
         Principal principal = new Principal();
         principal.buttonStyles(btnAtras);
         principal.buttonStyles(btnCrearRutina);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -183,18 +183,21 @@ public class CrearRutina extends javax.swing.JFrame {
 
     private void btnCrearRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearRutinaActionPerformed
         String nombre = inputName.getText();
-        String duracion = inputDuration.getText();
+        String duracionStr = inputDuration.getText();
         String dificultad = inputDifficult.getText();
         String descripcion = inputDescription.getText();
-        
-        
-        if (nombre.isEmpty() || duracion.isEmpty() || !dificultad.isEmpty() || !descripcion.isEmpty()) {
-            alta.mostrarMensaje("Es necesario completar todos los campos!", "Info", "Formulario Vacío");
+
+        if (nombre.isEmpty() || duracionStr.isEmpty() || dificultad.isEmpty() || descripcion.isEmpty()) {
+            alta.mostrarMensaje("Es necesario completar todos los campos!", "Error", "Formulario Vacío");
         } else {
-            sr.crearRutina(nombre, Integer.parseInt(duracion), dificultad, descripcion);
+            try {
+                int duracion = Integer.parseInt(duracionStr);
+                sr.crearRutina(nombre, duracion, dificultad, descripcion);
+                alta.mostrarMensaje("Se agregó la rutina a la base de datos", "Info", "Rutina creada exitosamente!");
+            } catch (NumberFormatException e) {
+                alta.mostrarMensaje("La duración debe ser un número válido", "Error", "Error de formato");
+            }
         }
-        
-        alta.mostrarMensaje("Se agrego la rutina a la base de datos", "Info", "Rutina creada exitosamente!");
     }//GEN-LAST:event_btnCrearRutinaActionPerformed
 
     private void inputDurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputDurationActionPerformed
@@ -210,11 +213,11 @@ public class CrearRutina extends javax.swing.JFrame {
         Principal principal = new Principal();
         VentanaRutinas ventana = new VentanaRutinas();
         principal.btnVolver(ventana, btnAtras);
-        
+
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void inputNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNameActionPerformed
-        
+
     }//GEN-LAST:event_inputNameActionPerformed
 
 

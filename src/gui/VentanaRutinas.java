@@ -10,6 +10,7 @@ public class VentanaRutinas extends javax.swing.JFrame {
         principal.buttonStyles(btnModificarRutina);
         principal.buttonStyles(btnEliminarRutina);
         principal.buttonStyles(btnVerRutinas);
+        principal.buttonStyles(btnAtras);
     }
 
     @SuppressWarnings("unchecked")
