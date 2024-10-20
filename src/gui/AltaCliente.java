@@ -7,15 +7,12 @@ import servicios.ServicioCliente;
 public class AltaCliente extends javax.swing.JFrame {
 
     ServicioCliente sc = new ServicioCliente();
-    
+
     public AltaCliente() {
         initComponents();
-        
+
         Principal principal = new Principal();
         principal.addLabelImage(logoImage);
-        principal.buttonStyles(btnAgregarCliente);
-        principal.buttonStyles(btnLimpiarCampoCliente);
-        principal.buttonStyles(btnvolverAltaCliente);
     }
 
     @SuppressWarnings("unchecked")
@@ -254,7 +251,7 @@ public class AltaCliente extends javax.swing.JFrame {
         dialog.setAlwaysOnTop(true);
         dialog.setVisible(true);
     }
-    
+
     private void txtNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreClienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreClienteActionPerformed
@@ -290,7 +287,7 @@ public class AltaCliente extends javax.swing.JFrame {
         mostrarMensaje("Se agrego el cliente a la base de datos", "Info", "Alta exitosa");
     }//GEN-LAST:event_btnAgregarClienteActionPerformed
 
-    
+
     private void btnvolverAltaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverAltaClienteActionPerformed
         this.dispose();
         VentanaCliente ventanaC = new VentanaCliente();

@@ -174,7 +174,6 @@ public class Principal extends javax.swing.JFrame {
 
     public void buttonStyles(JButton boton) {
         boton.setFocusPainted(false);
-        boton.setContentAreaFilled(false);
         boton.setOpaque(false);
     }
 
