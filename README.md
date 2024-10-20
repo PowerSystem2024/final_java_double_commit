@@ -1,5 +1,5 @@
 | Proyecto Final Java ☕ • UTN-FRSR, Mendoza |
-----------------------------------------------
+|---------------------------------------------|
 
 ### Cohorte 2024 - Grupo: Double Commit
 
