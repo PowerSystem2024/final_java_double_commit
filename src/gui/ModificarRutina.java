@@ -44,6 +44,8 @@ public class ModificarRutina extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(255, 153, 0));
 
         jLabel16.setFont(new java.awt.Font("Stencil", 1, 48)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 0, 0));
