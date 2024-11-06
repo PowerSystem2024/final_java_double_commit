@@ -9,6 +9,7 @@ public class CrearRutina extends javax.swing.JFrame {
 
     public CrearRutina() {
         initComponents();
+        this.setTitle("Creación de Rutina");
         Principal principal = new Principal();
         principal.buttonStyles(btnAtras);
         principal.buttonStyles(btnCrearRutina);
@@ -215,6 +216,7 @@ public class CrearRutina extends javax.swing.JFrame {
         this.dispose();
         VentanaRutinas ventana = new VentanaRutinas();
         ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void inputNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNameActionPerformed
