@@ -3,6 +3,7 @@ package servicios;
 import entidad.Rutina;
 import java.util.ArrayList;
 import java.util.Scanner;
+import javax.swing.table.DefaultTableModel;
 
 public class ServicioRutina {
 
@@ -22,6 +23,29 @@ public class ServicioRutina {
         for (Rutina rutina : rutinas) {
             System.out.println(rutina);
         }
+    }
+    
+     public DefaultTableModel cargarTabla() {
+        DefaultTableModel modeloTabla = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int clolumn) {
+                return false;
+            }
+        };
+
+        String[] titulos = {"Id", "Nombre", "Duracion", "NivelDificultad", "Descripcion"};
+        modeloTabla.setColumnIdentifiers(titulos);
+
+        for (int i = 0; i < rutinaInterfaz.size(); i++) {
+                modeloTabla.addRow(new Object[]{
+                rutinaInterfaz.get(i).getId(),
+                rutinaInterfaz.get(i).getNombre(),
+                rutinaInterfaz.get(i).getDuracion(),
+                rutinaInterfaz.get(i).getNivelDificultad(),
+                rutinaInterfaz.get(i).getDescripcion()});
+                }
+        
+        return modeloTabla;
     }
 
     public void actualizarRutina(ArrayList<Rutina> rutinas, int id, String nombre, int duracion, String nivelDificultad, String descripcion) {
