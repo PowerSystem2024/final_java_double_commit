@@ -58,6 +58,11 @@ public class VentanaRutinas extends javax.swing.JFrame {
         btnVerRutinas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnVerRutinas.setForeground(new java.awt.Color(255, 255, 255));
         btnVerRutinas.setText("Ver Rutinas");
+        btnVerRutinas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnVerRutinasMouseClicked(evt);
+            }
+        });
         btnVerRutinas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerRutinasActionPerformed(evt);
@@ -149,6 +154,13 @@ public class VentanaRutinas extends javax.swing.JFrame {
     private void btnVerRutinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerRutinasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVerRutinasActionPerformed
+
+    private void btnVerRutinasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerRutinasMouseClicked
+       this.dispose();
+       VentanaRutinas verRutina = new VentanaRutinas();
+       verRutina.setVisible(true);
+       verRutina.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnVerRutinasMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
