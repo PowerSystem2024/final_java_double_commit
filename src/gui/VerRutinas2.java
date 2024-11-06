@@ -7,8 +7,6 @@ package gui;
 import gui.VentanaRutinas;
 import servicios.ServicioRutina;
 
-
-
 public class VerRutinas2 extends javax.swing.JFrame {
  ServicioRutina sr = new ServicioRutina();
     
@@ -53,6 +51,11 @@ public class VerRutinas2 extends javax.swing.JFrame {
         btnModificarRutina.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnModificarRutina.setForeground(new java.awt.Color(255, 255, 255));
         btnModificarRutina.setText("Modificar Rutina");
+        btnModificarRutina.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnModificarRutinaMouseClicked(evt);
+            }
+        });
         btnModificarRutina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarRutinaActionPerformed(evt);
@@ -177,11 +180,18 @@ public class VerRutinas2 extends javax.swing.JFrame {
 
     
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        Principal principal = new Principal();
         VentanaRutinas ventana = new VentanaRutinas();
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnModificarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarRutinaMouseClicked
+        ModificarRutina ventana = new ModificarRutina();
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnModificarRutinaMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

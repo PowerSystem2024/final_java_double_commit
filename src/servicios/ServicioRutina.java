@@ -69,4 +69,24 @@ public class ServicioRutina {
         }
         return idEncontrado;
     }
+    
+     public int encontrarId(int id) {
+        int idEncontrado = -1;
+        for (int i = 0; i < rutinaInterfaz.size(); i++) {
+            if (rutinaInterfaz.get(i).getId() == id) {
+                idEncontrado = i;
+            }
+        }
+        return idEncontrado;
+    }
+    
+    public void modificarRutina(int id, String nombre, int duracion, String nivelDificultad, String descripcion) {
+        int i = encontrarId(id);
+        
+        rutinaInterfaz.get(i).setNombre(nombre);
+        rutinaInterfaz.get(i).setDuracion(duracion);
+        rutinaInterfaz.get(i).setNivelDificultad(nivelDificultad);
+        rutinaInterfaz.get(i).setDescripcion(descripcion);
+    }
+ 
 }
