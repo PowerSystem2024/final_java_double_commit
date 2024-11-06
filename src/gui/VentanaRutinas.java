@@ -11,6 +11,8 @@ public class VentanaRutinas extends javax.swing.JFrame {
         principal.buttonStyles(btnEliminarRutina);
         principal.buttonStyles(btnVerRutinas);
         principal.buttonStyles(btnAtras);
+        
+        this.setTitle("Creación de Rutinas");
     }
 
     @SuppressWarnings("unchecked")
@@ -138,7 +140,10 @@ public class VentanaRutinas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificarRutinaActionPerformed
 
     private void btnEliminarRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRutinaActionPerformed
-        // TODO add your handling code here:
+        EliminarRutina eliminarRutina = new EliminarRutina();
+        eliminarRutina.setVisible(true);
+        eliminarRutina.setLocationRelativeTo(null);
+        
     }//GEN-LAST:event_btnEliminarRutinaActionPerformed
 
     private void btnCrearRutina1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearRutina1ActionPerformed

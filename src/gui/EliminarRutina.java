@@ -15,6 +15,8 @@ public class EliminarRutina extends javax.swing.JFrame {
      */
     public EliminarRutina() {
         initComponents();
+        
+        this.setTitle("Eliminación de Rutinas");
     }
 
     /**
@@ -27,14 +29,17 @@ public class EliminarRutina extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnAtras = new javax.swing.JButton();
+        btnvolverAltaCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnAtras.setText("jButton1");
-        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+        btnvolverAltaCliente.setBackground(new java.awt.Color(0, 0, 0));
+        btnvolverAltaCliente.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnvolverAltaCliente.setForeground(new java.awt.Color(255, 173, 1));
+        btnvolverAltaCliente.setText("Volver");
+        btnvolverAltaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAtrasActionPerformed(evt);
+                btnvolverAltaClienteActionPerformed(evt);
             }
         });
 
@@ -43,16 +48,16 @@ public class EliminarRutina extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(btnAtras)
-                .addContainerGap(608, Short.MAX_VALUE))
+                .addGap(103, 103, 103)
+                .addComponent(btnvolverAltaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(584, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(453, Short.MAX_VALUE)
-                .addComponent(btnAtras)
-                .addGap(61, 61, 61))
+                .addContainerGap(437, Short.MAX_VALUE)
+                .addComponent(btnvolverAltaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -71,10 +76,12 @@ public class EliminarRutina extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-       Principal principal = new Principal();
-       principal.setVisible(true);
-    }//GEN-LAST:event_btnAtrasActionPerformed
+    private void btnvolverAltaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverAltaClienteActionPerformed
+        this.dispose();
+        VentanaRutinas ventanaRutinas = new VentanaRutinas();
+        ventanaRutinas.setVisible(true);
+        ventanaRutinas.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnvolverAltaClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,7 +119,7 @@ public class EliminarRutina extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnvolverAltaCliente;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
