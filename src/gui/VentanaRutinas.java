@@ -140,6 +140,7 @@ public class VentanaRutinas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificarRutinaActionPerformed
 
     private void btnEliminarRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRutinaActionPerformed
+        this.dispose();
         EliminarRutina eliminarRutina = new EliminarRutina();
         eliminarRutina.setVisible(true);
         eliminarRutina.setLocationRelativeTo(null);
