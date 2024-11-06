@@ -90,6 +90,30 @@ El grupo **Double Commit** se enorgullece de presentar este trabajo como su proy
 
 ---
 
+## Para poder ejecutar el proyecto, es necesario tener instalado:
+
+- Java JDK 8+
+- NetBeans IDE 8+
+- Asegúrate de tener instalado Java Development Kit (JDK) versión 8 o superior en tu sistema
+- Descarga e instala NetBeans IDE 21.0 o una versión más reciente
+- Clona este repositorio o descarga el código fuente como archivo ZIP
+- Abre NetBeans IDE y selecciona "Abrir Proyecto"
+- Navega hasta la carpeta donde descargaste/clonaste el proyecto y selecciónalo
+- Una vez abierto el proyecto, haz clic derecho sobre él y selecciona "Clean and Build"
+- Después de compilar exitosamente, haz clic derecho nuevamente y selecciona "Run"
+
+El sistema debería iniciarse mostrando la ventana principal de la aplicación. Desde allí podrás:
+- Gestionar clientes (agregar, modificar, eliminar)
+- Crear y asignar rutinas personalizadas
+- Calcular IMC y otros indicadores
+- Ver estadísticas y seguimiento de los clientes
+
+Nota: Si encuentras algún problema durante la instalación o ejecución, asegúrate de:
+- Tener correctamente configurada la variable de entorno JAVA_HOME
+- Tener todos los permisos necesarios en la carpeta del proyecto
+- Que no haya otro proceso usando los puertos requeridos por la aplicación
+
+
 ## Integrantes del Grupo Double Commit:
 
 <article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(auto, 1fr))">
