@@ -51,7 +51,7 @@ public class CrearRutina extends javax.swing.JFrame {
         });
 
         inputName.setBackground(new java.awt.Color(221, 221, 221));
-        inputName.setBorder(null);
+        inputName.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         inputName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputNameActionPerformed(evt);
@@ -67,7 +67,7 @@ public class CrearRutina extends javax.swing.JFrame {
         jLabel3.setText("Duración:");
 
         inputDuration.setBackground(new java.awt.Color(221, 221, 221));
-        inputDuration.setBorder(null);
+        inputDuration.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         inputDuration.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputDurationActionPerformed(evt);
@@ -79,7 +79,7 @@ public class CrearRutina extends javax.swing.JFrame {
         jLabel4.setText("Dificultad:");
 
         inputDifficult.setBackground(new java.awt.Color(221, 221, 221));
-        inputDifficult.setBorder(null);
+        inputDifficult.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         inputDifficult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputDifficultActionPerformed(evt);
@@ -103,7 +103,7 @@ public class CrearRutina extends javax.swing.JFrame {
         inputDescription.setColumns(20);
         inputDescription.setForeground(new java.awt.Color(30, 30, 30));
         inputDescription.setRows(5);
-        inputDescription.setBorder(null);
+        inputDescription.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jScrollPane1.setViewportView(inputDescription);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
