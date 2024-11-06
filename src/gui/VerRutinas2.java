@@ -6,9 +6,11 @@ package gui;
 
 import gui.VentanaRutinas;
 import servicios.ServicioRutina;
+import gui.AltaCliente;
 
 public class VerRutinas2 extends javax.swing.JFrame {
  ServicioRutina sr = new ServicioRutina();
+ AltaCliente ac = new AltaCliente();
     
     
     public VerRutinas2() {
@@ -187,10 +189,19 @@ public class VerRutinas2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnModificarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarRutinaMouseClicked
-        ModificarRutina ventana = new ModificarRutina();
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
-        this.dispose();
+         if (tablaRutinas.getRowCount() > 0) {
+            if (tablaRutinas.getSelectedRow() != -1) {
+                int idRutina = Integer.parseInt(String.valueOf(tablaRutinas.getValueAt(tablaRutinas.getSelectedRow(), 0)));
+                ModificarRutina modificar = new ModificarRutina(idRutina);
+                modificar.setVisible(true);
+                modificar.setLocationRelativeTo(null);
+                this.dispose();
+            } else {
+                ac.mostrarMensaje("No selecciono un registro para modificar", "Error", "Error al modificar");
+            }
+        } else {
+            ac.mostrarMensaje("La tabla esta vacia, no se puede modificar", "Error", "Error al modificar");
+        }
     }//GEN-LAST:event_btnModificarRutinaMouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

@@ -6,17 +6,19 @@ package gui;
 
 import servicios.ServicioRutina;
 import gui.AltaCliente;
+import entidad.Rutina;
 
 
 public class ModificarRutina extends javax.swing.JFrame {
     ServicioRutina sr = new ServicioRutina();
     AltaCliente ac = new AltaCliente();
-    
+    Rutina rutina = new Rutina();
     /**
      * Creates new form ModificarRutina
      */
-    public ModificarRutina() {
+    public ModificarRutina(int idRutina) {
         initComponents();
+        cargarAutomatico(idRutina);
     }
 
     /**
@@ -249,4 +251,15 @@ public class ModificarRutina extends javax.swing.JFrame {
     private javax.swing.JTextField txtNivelDificultad;
     private javax.swing.JTextField txtNombreRutina;
     // End of variables declaration//GEN-END:variables
+
+    private void cargarAutomatico(int id) {
+       sr.encontrarId(id);
+       txtIdRutina.setText(String.valueOf(rutina.getId()));
+       txtIdRutina.setEditable(false);
+       txtNombreRutina.setText(rutina.getNombre());
+       txtDescripcion.setText(rutina.getDescripcion());
+       txtDuracion.setText(String.valueOf(rutina.getDuracion()));
+       txtNivelDificultad.setText(rutina.getNivelDificultad());
+       
+    }
 }
