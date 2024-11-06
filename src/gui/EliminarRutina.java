@@ -33,6 +33,8 @@ public class EliminarRutina extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 173, 1));
+
         btnvolverAltaCliente.setBackground(new java.awt.Color(0, 0, 0));
         btnvolverAltaCliente.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnvolverAltaCliente.setForeground(new java.awt.Color(255, 173, 1));
@@ -78,9 +80,9 @@ public class EliminarRutina extends javax.swing.JFrame {
 
     private void btnvolverAltaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverAltaClienteActionPerformed
         this.dispose();
-        VentanaRutinas ventanaRutinas = new VentanaRutinas();
-        ventanaRutinas.setVisible(true);
-        ventanaRutinas.setLocationRelativeTo(null);
+        VentanaRutinas ventana = new VentanaRutinas();
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnvolverAltaClienteActionPerformed
 
     /**

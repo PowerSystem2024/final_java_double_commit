@@ -213,10 +213,8 @@ public class CrearRutina extends javax.swing.JFrame {
 
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         this.dispose();
-        Principal principal = new Principal();
         VentanaRutinas ventana = new VentanaRutinas();
-        principal.btnVolver(ventana, btnAtras);
-
+        ventana.setVisible(true);
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void inputNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNameActionPerformed
