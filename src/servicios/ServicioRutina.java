@@ -9,6 +9,17 @@ public class ServicioRutina {
 
     private static ArrayList<Rutina> rutinaInterfaz = new ArrayList<>();
 
+    public ServicioRutina(){
+        if(rutinaInterfaz.isEmpty()){
+        rutinaInterfaz.add(new Rutina(1,"Tren Superior", 60, "Medio", "Se trabaja todos los musculos del tren superior"));
+        rutinaInterfaz.add(new Rutina(2,"Tren Inferior", 60, "Medio", "Se trabaja todos los musculos del tren superior"));
+        rutinaInterfaz.add(new Rutina(3,"Salto de cuerda", 15, "Basico", "Deberas hacer saltos cortos, sin despegar mucho del suelo durante 15min"));
+        rutinaInterfaz.add(new Rutina(4,"Aerobico", 30, "Alto", "Consiste en ejercicios donde el ritmo cardiaco es acelerado para poder quemar muchas calorias"));
+        }
+    
+    }
+    
+    
     public void crearRutina(String nombre, int duracion, String nivelDificultad, String descripcion) {
         Rutina rutina = new Rutina();
 
