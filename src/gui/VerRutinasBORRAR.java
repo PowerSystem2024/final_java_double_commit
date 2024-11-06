@@ -8,11 +8,11 @@ import gui.VentanaRutinas;
 import servicios.ServicioRutina;
 
 
-public class VerRutinas extends javax.swing.JFrame {
+public class VerRutinasBORRAR extends javax.swing.JFrame {
 
     ServicioRutina sr = new ServicioRutina();
     
-    public VerRutinas() {
+    public VerRutinasBORRAR() {
         initComponents();
     }
 
