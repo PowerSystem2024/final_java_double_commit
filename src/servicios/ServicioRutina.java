@@ -16,7 +16,6 @@ public class ServicioRutina {
         rutinaInterfaz.add(new Rutina(3,"Salto de cuerda", 15, "Basico", "Deberas hacer saltos cortos, sin despegar mucho del suelo durante 15min"));
         rutinaInterfaz.add(new Rutina(4,"Aerobico", 30, "Alto", "Consiste en ejercicios donde el ritmo cardiaco es acelerado para poder quemar muchas calorias"));
         }
-    
     }
     
     
