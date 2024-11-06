@@ -8,7 +8,7 @@ import gui.VentanaRutinas;
 import servicios.ServicioRutina;
 
 
-public class VerRutinas extends javax.swing.JPanel {
+public class VerRutinas extends javax.swing.JFrame {
 
     ServicioRutina sr = new ServicioRutina();
     

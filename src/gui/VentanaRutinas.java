@@ -157,7 +157,7 @@ public class VentanaRutinas extends javax.swing.JFrame {
 
     private void btnVerRutinasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVerRutinasMouseClicked
        this.dispose();
-       VentanaRutinas verRutina = new VentanaRutinas();
+       VerRutinas verRutina = new VerRutinas();
        verRutina.setVisible(true);
        verRutina.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnVerRutinasMouseClicked
