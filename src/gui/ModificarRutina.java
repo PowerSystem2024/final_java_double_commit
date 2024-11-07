@@ -209,7 +209,7 @@ public class ModificarRutina extends javax.swing.JFrame {
 
         sr.modificarRutina( id, nombre, duracion, niveldificultad, descripcion);
 
-        ac.mostrarMensaje("Se modifico la rutina!", "Info", "Modificacion exitosa");
+        ac.mostrarMensaje("Se modifico la rutina: ID "+ rutina.getId() + "\nNombre: " + rutina.getNombre(), "Info", "Modificacion exitosa");
 
         VerRutinas ventana = new VerRutinas();
         ventana.setVisible(true);
