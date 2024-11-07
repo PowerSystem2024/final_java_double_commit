@@ -19,15 +19,11 @@ public class Rutina {
     }
 
     public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        Rutina.id = id;
+        return this.id;
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -35,7 +31,7 @@ public class Rutina {
     }
 
     public int getDuracion() {
-        return duracion;
+        return this.duracion;
     }
 
     public void setDuracion(int duracion) {
@@ -43,7 +39,7 @@ public class Rutina {
     }
 
     public String getNivelDificultad() {
-        return nivelDificultad;
+        return this.nivelDificultad;
     }
 
     public void setNivelDificultad(String nivelDificultad) {
@@ -51,7 +47,7 @@ public class Rutina {
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return this.descripcion;
     }
 
     public void setDescripcion(String descripcion) {
