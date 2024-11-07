@@ -9,10 +9,10 @@ import servicios.ServicioRutina;
 import gui.AltaCliente;
 
 public class VerRutinas extends javax.swing.JFrame {
- ServicioRutina sr = new ServicioRutina();
- AltaCliente ac = new AltaCliente();
-    
-    
+
+    ServicioRutina sr = new ServicioRutina();
+    AltaCliente ac = new AltaCliente();
+
     public VerRutinas() {
         initComponents();
     }
@@ -180,16 +180,16 @@ public class VerRutinas extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnModificarRutinaActionPerformed
 
-   
+
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        this.dispose();
         VentanaRutinas ventana = new VentanaRutinas();
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
-        this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnModificarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarRutinaMouseClicked
-         if (tablaRutinas.getRowCount() > 0) {
+        if (tablaRutinas.getRowCount() > 0) {
             if (tablaRutinas.getSelectedRow() != -1) {
                 int idRutina = Integer.parseInt(String.valueOf(tablaRutinas.getValueAt(tablaRutinas.getSelectedRow(), 0)));
                 ModificarRutina modificar = new ModificarRutina(idRutina);
