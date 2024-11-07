@@ -228,7 +228,7 @@ public class ModificarRutina extends javax.swing.JFrame {
     private void btnvolverAltaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverAltaClienteActionPerformed
         this.dispose();
 
-        VerRutinas2 rutina = new VerRutinas2();
+        VerRutinas rutina = new VerRutinas();
         rutina.setVisible(true);
         rutina.setLocationRelativeTo(null);
 

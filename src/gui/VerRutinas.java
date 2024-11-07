@@ -8,12 +8,12 @@ import gui.VentanaRutinas;
 import servicios.ServicioRutina;
 import gui.AltaCliente;
 
-public class VerRutinas2 extends javax.swing.JFrame {
+public class VerRutinas extends javax.swing.JFrame {
  ServicioRutina sr = new ServicioRutina();
  AltaCliente ac = new AltaCliente();
     
     
-    public VerRutinas2() {
+    public VerRutinas() {
         initComponents();
     }
 
