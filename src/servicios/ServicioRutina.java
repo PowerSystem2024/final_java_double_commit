@@ -9,16 +9,15 @@ public class ServicioRutina {
 
     private static ArrayList<Rutina> rutinaInterfaz = new ArrayList<>();
 
-    public ServicioRutina(){
-        if(rutinaInterfaz.isEmpty()){
-        rutinaInterfaz.add(new Rutina(1,"Tren Superior", 60, "Medio", "Se trabaja todos los musculos del tren superior"));
-        rutinaInterfaz.add(new Rutina(2,"Tren Inferior", 60, "Medio", "Se trabaja todos los musculos del tren superior"));
-        rutinaInterfaz.add(new Rutina(3,"Salto de cuerda", 15, "Basico", "Deberas hacer saltos cortos, sin despegar mucho del suelo durante 15min"));
-        rutinaInterfaz.add(new Rutina(4,"Aerobico", 30, "Alto", "Consiste en ejercicios donde el ritmo cardiaco es acelerado para poder quemar muchas calorias"));
+    public ServicioRutina() {
+        if (rutinaInterfaz.isEmpty()) {
+            rutinaInterfaz.add(new Rutina(1, "Tren Superior", 60, "Medio", "Se trabaja todos los musculos del tren superior"));
+            rutinaInterfaz.add(new Rutina(2, "Tren Inferior", 60, "Medio", "Se trabaja todos los musculos del tren superior"));
+            rutinaInterfaz.add(new Rutina(3, "Salto de cuerda", 15, "Basico", "Deberas hacer saltos cortos, sin despegar mucho del suelo durante 15min"));
+            rutinaInterfaz.add(new Rutina(4, "Aerobico", 30, "Alto", "Consiste en ejercicios donde el ritmo cardiaco es acelerado para poder quemar muchas calorias"));
         }
     }
-    
-    
+
     public void crearRutina(String nombre, int duracion, String nivelDificultad, String descripcion) {
         Rutina rutina = new Rutina();
 
@@ -34,8 +33,8 @@ public class ServicioRutina {
             System.out.println(rutina);
         }
     }
-    
-     public DefaultTableModel cargarTabla() {
+
+    public DefaultTableModel cargarTabla() {
         DefaultTableModel modeloTabla = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int clolumn) {
@@ -47,14 +46,14 @@ public class ServicioRutina {
         modeloTabla.setColumnIdentifiers(titulos);
 
         for (int i = 0; i < rutinaInterfaz.size(); i++) {
-                modeloTabla.addRow(new Object[]{
+            modeloTabla.addRow(new Object[]{
                 rutinaInterfaz.get(i).getId(),
                 rutinaInterfaz.get(i).getNombre(),
                 rutinaInterfaz.get(i).getDuracion(),
                 rutinaInterfaz.get(i).getNivelDificultad(),
                 rutinaInterfaz.get(i).getDescripcion()});
-                }
-        
+        }
+
         return modeloTabla;
     }
 
@@ -71,16 +70,15 @@ public class ServicioRutina {
     }
 
     public int buscarId(ArrayList<Rutina> rutinas, int id) {
-        int idEncontrado = -1;
         for (int i = 0; i < rutinas.size(); i++) {
             if (rutinas.get(i).getId() == id) {
-                idEncontrado = i;
+                return i; // Retorna inmediatamente cuando encuentra el id
             }
         }
-        return idEncontrado;
+        return -1; // Si no se encuentra
     }
-    
-     public int encontrarId(int id) {
+
+    public int encontrarId(int id) {
         int idEncontrado = -1;
         for (int i = 0; i < rutinaInterfaz.size(); i++) {
             if (rutinaInterfaz.get(i).getId() == id) {
@@ -89,14 +87,14 @@ public class ServicioRutina {
         }
         return idEncontrado;
     }
-    
+
     public void modificarRutina(int id, String nombre, int duracion, String nivelDificultad, String descripcion) {
         int i = encontrarId(id);
-        
+
         rutinaInterfaz.get(i).setNombre(nombre);
         rutinaInterfaz.get(i).setDuracion(duracion);
         rutinaInterfaz.get(i).setNivelDificultad(nivelDificultad);
         rutinaInterfaz.get(i).setDescripcion(descripcion);
     }
- 
+
 }
