@@ -253,13 +253,17 @@ public class ModificarRutina extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void cargarAutomatico(int id) {
-       sr.encontrarId(id);
-       txtIdRutina.setText(String.valueOf(rutina.getId()));
-       txtIdRutina.setEditable(false);
-       txtNombreRutina.setText(rutina.getNombre());
-       txtDescripcion.setText(rutina.getDescripcion());
-       txtDuracion.setText(String.valueOf(rutina.getDuracion()));
-       txtNivelDificultad.setText(rutina.getNivelDificultad());
-       
+    rutina = sr.encontrarRutinaPorId(id);
+    
+    if (rutina != null) {
+        txtIdRutina.setText(String.valueOf(rutina.getId()));
+        txtIdRutina.setEditable(false);
+        txtNombreRutina.setText(rutina.getNombre());
+        txtDescripcion.setText(rutina.getDescripcion());
+        txtDuracion.setText(String.valueOf(rutina.getDuracion()));
+        txtNivelDificultad.setText(rutina.getNivelDificultad());
+    } else {
+        ac.mostrarMensaje("La rutina no fue encontrada", "Error", "Rutina no encontrada");
     }
+}
 }

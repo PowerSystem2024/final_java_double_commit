@@ -92,6 +92,15 @@ public class ServicioRutina {
         return idEncontrado;
     }
 
+    public Rutina encontrarRutinaPorId(int id) {
+        for (Rutina rutina : rutinaInterfaz) {
+            if (rutina.getId() == id) {
+                return rutina;
+            }
+        }
+        return null;
+    }
+
     public void modificarRutina(int id, String nombre, int duracion, String nivelDificultad, String descripcion) {
         int i = encontrarId(id);
 

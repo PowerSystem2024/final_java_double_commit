@@ -195,7 +195,6 @@ public class VerRutinas extends javax.swing.JFrame {
                 ModificarRutina modificar = new ModificarRutina(idRutina);
                 modificar.setVisible(true);
                 modificar.setLocationRelativeTo(null);
-                this.dispose();
             } else {
                 ac.mostrarMensaje("No selecciono un registro para modificar", "Error", "Error al modificar");
             }
