@@ -2,7 +2,7 @@ package entidad;
 
 public class Rutina {
 
-    private int id; // Cambia a no estático
+    private int id;
     private String nombre;
     private int duracion;
     private String nivelDificultad;
@@ -14,6 +14,14 @@ public class Rutina {
     public Rutina() {
     }
 
+     public Rutina(int id, String nombre, int duracion, String nivelDificultad, String descripcion) {
+        this.id = id; // Asigna el id que se pasa como argumento
+        this.nombre = nombre;
+        this.duracion = duracion;
+        this.nivelDificultad = nivelDificultad;
+        this.descripcion = descripcion;
+    }
+     
     public Rutina(String nombre, int duracion, String nivelDificultad, String descripcion) {
         this.id = ++ultimoId; // Incrementa y asigna el id automáticamente
         this.nombre = nombre;

@@ -19,12 +19,16 @@ public class ServicioRutina {
     }
 
     public void crearRutina(String nombre, int duracion, String nivelDificultad, String descripcion) {
-        Rutina rutina = new Rutina();
 
-        rutina.setNombre(nombre);
-        rutina.setDuracion(duracion);
-        rutina.setNivelDificultad(nivelDificultad);
-        rutina.setDescripcion(descripcion);
+        int nuevoId;
+        if (rutinaInterfaz.isEmpty()) {
+            nuevoId = 1;
+        } else {
+            Rutina ultimaRutina = rutinaInterfaz.get(rutinaInterfaz.size() - 1);
+            int ultimoId = ultimaRutina.getId();
+            nuevoId = ultimoId + 1;
+        }
+        Rutina rutina = new Rutina(nuevoId, nombre, duracion, nivelDificultad, descripcion);
         rutinaInterfaz.add(rutina);
     }
 
