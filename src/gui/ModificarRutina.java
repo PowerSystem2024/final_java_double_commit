@@ -209,11 +209,11 @@ public class ModificarRutina extends javax.swing.JFrame {
 
         sr.modificarRutina( id, nombre, duracion, niveldificultad, descripcion);
 
-        ac.mostrarMensaje("Se modifico el cliente a la base de datos", "Info", "Modificacion exitosa");
+        ac.mostrarMensaje("Se modifico la rutina!", "Info", "Modificacion exitosa");
 
-        ConsultaCliente consulta = new ConsultaCliente();
-        consulta.setVisible(true);
-        consulta.setLocationRelativeTo(null);
+        VerRutinas ventana = new VerRutinas();
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnModificarClienteActionPerformed
 
     private void btnvolverVerRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverVerRutinaActionPerformed
