@@ -15,6 +15,7 @@ public class VerRutinas extends javax.swing.JFrame {
 
     public VerRutinas() {
         initComponents();
+        this.setTitle("Consulta de Rutinas");
     }
 
     /**
@@ -129,7 +130,7 @@ public class VerRutinas extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnModificarRutina, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEliminarRutina, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnAtras, javax.swing.GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE))
                 .addGap(23, 23, 23))
         );
 
@@ -159,7 +160,7 @@ public class VerRutinas extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 563, Short.MAX_VALUE)
+            .addGap(0, 565, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -177,18 +178,8 @@ public class VerRutinas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarRutinaActionPerformed
 
     private void btnModificarRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarRutinaActionPerformed
-
-    }//GEN-LAST:event_btnModificarRutinaActionPerformed
-
-
-    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         this.dispose();
-        VentanaRutinas ventana = new VentanaRutinas();
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
-    }//GEN-LAST:event_btnAtrasActionPerformed
-
-    private void btnModificarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarRutinaMouseClicked
+        
         if (tablaRutinas.getRowCount() > 0) {
             if (tablaRutinas.getSelectedRow() != -1) {
                 int idRutina = Integer.parseInt(String.valueOf(tablaRutinas.getValueAt(tablaRutinas.getSelectedRow(), 0)));
@@ -201,6 +192,18 @@ public class VerRutinas extends javax.swing.JFrame {
         } else {
             ac.mostrarMensaje("La tabla esta vacia, no se puede modificar", "Error", "Error al modificar");
         }
+    }//GEN-LAST:event_btnModificarRutinaActionPerformed
+
+
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        this.dispose();
+        VentanaRutinas ventana = new VentanaRutinas();
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnAtrasActionPerformed
+
+    private void btnModificarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarRutinaMouseClicked
+        
     }//GEN-LAST:event_btnModificarRutinaMouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

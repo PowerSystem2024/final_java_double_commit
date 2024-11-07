@@ -18,6 +18,7 @@ public class ModificarRutina extends javax.swing.JFrame {
      */
     public ModificarRutina(int idRutina) {
         initComponents();
+        this.setTitle("Modificación de rutina");
         cargarAutomatico(idRutina);
     }
 
@@ -37,7 +38,7 @@ public class ModificarRutina extends javax.swing.JFrame {
         txtNombreRutina = new javax.swing.JTextField();
         txtIdRutina = new javax.swing.JTextField();
         btnModificarCliente = new javax.swing.JButton();
-        btnvolverAltaCliente = new javax.swing.JButton();
+        btnvolverVerRutina = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -92,13 +93,13 @@ public class ModificarRutina extends javax.swing.JFrame {
             }
         });
 
-        btnvolverAltaCliente.setBackground(new java.awt.Color(0, 0, 0));
-        btnvolverAltaCliente.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnvolverAltaCliente.setForeground(new java.awt.Color(255, 173, 1));
-        btnvolverAltaCliente.setText("Volver");
-        btnvolverAltaCliente.addActionListener(new java.awt.event.ActionListener() {
+        btnvolverVerRutina.setBackground(new java.awt.Color(0, 0, 0));
+        btnvolverVerRutina.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnvolverVerRutina.setForeground(new java.awt.Color(255, 173, 1));
+        btnvolverVerRutina.setText("Volver");
+        btnvolverVerRutina.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnvolverAltaClienteActionPerformed(evt);
+                btnvolverVerRutinaActionPerformed(evt);
             }
         });
 
@@ -127,11 +128,11 @@ public class ModificarRutina extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(107, 107, 107)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnvolverAltaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
+                        .addComponent(btnvolverVerRutina, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE)
                         .addComponent(btnModificarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,11 +148,11 @@ public class ModificarRutina extends javax.swing.JFrame {
                             .addComponent(txtDuracion)
                             .addComponent(txtNivelDificultad)
                             .addComponent(txtDescripcion, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addGap(48, 48, 48))
+                .addGap(107, 107, 107))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel16)
-                .addGap(47, 47, 47))
+                .addGap(114, 114, 114))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,7 +181,7 @@ public class ModificarRutina extends javax.swing.JFrame {
                     .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnvolverAltaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnvolverVerRutina, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnModificarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37))
         );
@@ -197,7 +198,8 @@ public class ModificarRutina extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIdRutinaActionPerformed
 
     private void btnModificarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarClienteActionPerformed
-       
+        this.dispose();
+        
         int id = Integer.parseInt(txtIdRutina.getText());
         String nombre = txtNombreRutina.getText();
         int duracion = Integer.parseInt(txtDuracion.getText());
@@ -212,23 +214,21 @@ public class ModificarRutina extends javax.swing.JFrame {
         ConsultaCliente consulta = new ConsultaCliente();
         consulta.setVisible(true);
         consulta.setLocationRelativeTo(null);
-
-        this.dispose();
     }//GEN-LAST:event_btnModificarClienteActionPerformed
 
-    private void btnvolverAltaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverAltaClienteActionPerformed
+    private void btnvolverVerRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvolverVerRutinaActionPerformed
         this.dispose();
-
+        
         VerRutinas rutina = new VerRutinas();
         rutina.setVisible(true);
         rutina.setLocationRelativeTo(null);
 
-    }//GEN-LAST:event_btnvolverAltaClienteActionPerformed
+    }//GEN-LAST:event_btnvolverVerRutinaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnModificarCliente;
-    private javax.swing.JButton btnvolverAltaCliente;
+    private javax.swing.JButton btnvolverVerRutina;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel16;
