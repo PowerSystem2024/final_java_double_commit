@@ -1,17 +1,21 @@
 package entidad;
 
 public class Rutina {
-    private static int id = 0;
+
+    private int id; // Cambia a no estático
     private String nombre;
     private int duracion;
     private String nivelDificultad;
     private String descripcion;
 
+    // Variable estática para llevar la cuenta del último ID usado
+    private static int ultimoId = 0;
+
     public Rutina() {
     }
 
-    public Rutina(int id, String nombre, int duracion, String nivelDificultad, String descripcion) {
-        Rutina.id = ++Rutina.id;
+    public Rutina(String nombre, int duracion, String nivelDificultad, String descripcion) {
+        this.id = ++ultimoId; // Incrementa y asigna el id automáticamente
         this.nombre = nombre;
         this.duracion = duracion;
         this.nivelDificultad = nivelDificultad;
@@ -52,11 +56,11 @@ public class Rutina {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
-    }  
+    }
 
     @Override
     public String toString() {
         return "Rutina{" + "id=" + id + ", nombre=" + nombre + ", duracion=" + duracion + ", nivelDificultad=" + nivelDificultad + ", descripcion=" + descripcion + '}';
     }
-    
+
 }
