@@ -197,6 +197,9 @@ public class VerRutinas extends javax.swing.JFrame {
                 modificar.setLocationRelativeTo(null);
             } else {
                 ac.mostrarMensaje("No selecciono un registro para modificar", "Error", "Error al modificar");
+                VerRutinas ventana = new VerRutinas();
+                ventana.setVisible(true);
+                ventana.setLocationRelativeTo(null);
             }
         } else {
             ac.mostrarMensaje("La tabla esta vacia, no se puede modificar", "Error", "Error al modificar");
