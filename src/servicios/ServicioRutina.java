@@ -69,8 +69,8 @@ public class ServicioRutina {
         rutinas.get(idEncontrado).setDescripcion(descripcion);
     }
 
-    public void eliminarRutina(ArrayList<Rutina> rutinas, int id) {
-        rutinas.remove(buscarId(rutinas, id));
+    public void eliminarRutina(int id) {
+        rutinaInterfaz.remove(encontrarId(id));
     }
 
     public int buscarId(ArrayList<Rutina> rutinas, int id) {

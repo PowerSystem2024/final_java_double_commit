@@ -8,12 +8,12 @@ package gui;
  *
  * @author Neo
  */
-public class EliminarRutina extends javax.swing.JFrame {
+public class EliminarRutinaBORRAR extends javax.swing.JFrame {
 
     /**
      * Creates new form EliminarRutina
      */
-    public EliminarRutina() {
+    public EliminarRutinaBORRAR() {
         initComponents();
         
         this.setTitle("Eliminación de Rutinas");

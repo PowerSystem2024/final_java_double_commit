@@ -172,14 +172,23 @@ public class VerRutinas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarRutinaActionPerformed
-        EliminarRutina eliminarRutina = new EliminarRutina();
-        eliminarRutina.setVisible(true);
-        eliminarRutina.setLocationRelativeTo(null);
+        if (tablaRutinas.getRowCount() > 0) {
+            if (tablaRutinas.getSelectedRow() != -1) {
+                int idRutina = Integer.parseInt(String.valueOf(tablaRutinas.getValueAt(tablaRutinas.getSelectedRow(), 0)));
+                sr.eliminarRutina(idRutina);
+                ac.mostrarMensaje("Rutina borrada correctamente", "Info", "Borrado Exitoso");
+                tablaRutinas.setModel(sr.cargarTabla());
+            } else {
+                ac.mostrarMensaje("No selecciono un registro para eliminar", "Error", "Error al eliminar");
+            }
+        } else {
+            ac.mostrarMensaje("La tabla esta vacia, no se puede eliminar", "Error", "Error al eliminar");
+        }
     }//GEN-LAST:event_btnEliminarRutinaActionPerformed
 
     private void btnModificarRutinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarRutinaActionPerformed
         this.dispose();
-        
+
         if (tablaRutinas.getRowCount() > 0) {
             if (tablaRutinas.getSelectedRow() != -1) {
                 int idRutina = Integer.parseInt(String.valueOf(tablaRutinas.getValueAt(tablaRutinas.getSelectedRow(), 0)));
@@ -203,7 +212,7 @@ public class VerRutinas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void btnModificarRutinaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarRutinaMouseClicked
-        
+
     }//GEN-LAST:event_btnModificarRutinaMouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
