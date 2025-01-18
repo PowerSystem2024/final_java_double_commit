@@ -145,5 +145,11 @@ Nota: Si encuentras algún problema durante la instalación o ejecución, asegú
 
 </article>
 
+#
+
+<div align="center">  
+  <img src="https://neotecs.vercel.app/api/badge-counter?user=final_java_double_commit&badge_color=181818&counter_color=463F98" alt="Contador de Visitas SolidSnk86" />
+</div>
+
 
 
